@@ -1,0 +1,11 @@
+regisztráció: az alkalmazásba be lehet regisztrálni, név, emailcím és jelszó megadásával
+bejelentkezés: az alkalmazásba be lehet jelentkezni egy meglévő felhasználói fiókkal
+Kijelentkezés: ki lehet jelentkezni bejelentkezett felhasználóval
+új cikk írás
+felhasználó adatainak update-elése
+cikkek megtekintése
+cikkek lájkolása
+kommentek írása cikkekhez
+más felhasználók követése
+saját cikkek törlése
+saját cikkek editelése

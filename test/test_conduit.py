@@ -296,3 +296,5 @@ class TestConduit(object):
             print("hiba")
 
 
+        self.driver = webdriver.Chrome(ChromeDriverManager().install(), options=browser_options)
+

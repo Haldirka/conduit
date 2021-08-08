@@ -13,7 +13,6 @@ class TestConduit(object):
     def setup(self):
         browser_options = Options()
         browser_options.headless = True
-        driver = webdriver.Chrome(ChromeDriverManager().install(), options=browser_options)
         self.driver = webdriver.Chrome(ChromeDriverManager().install(), options=browser_options)
         self.driver.get("http://localhost:1667/")
 
@@ -51,7 +50,8 @@ class TestConduit(object):
             WebDriverWait(self.driver, 5).until(
                 EC.presence_of_element_located((By.XPATH,
                                                 '//button[@class="cookie__bar__buttons__button cookie__bar__buttons__button--accept"]'))).click()
-        # assertion hiányzik
+            time.sleep(2)
+            assert (self.driver.find_elements_by_xpath('//button') == [])
         except:
             print("hiba")
 
@@ -291,4 +291,30 @@ class TestConduit(object):
         except:
             print("hiba")
 
+    def test_listing_article_titles_to_file(self):
+        try:
+            WebDriverWait(self.driver, 5).until(
+                EC.presence_of_element_located((By.XPATH, '//a[@class="nav-link" and @href="#/login"]'))).click()
+            WebDriverWait(self.driver, 5).until(
+                EC.presence_of_element_located((By.XPATH, '//input[@placeholder="Email"]'))).send_keys("gzs@gmail.com")
+            WebDriverWait(self.driver, 5).until(
+                EC.presence_of_element_located((By.XPATH, '//input[@placeholder="Password"]'))).send_keys("Asd12345")
+            WebDriverWait(self.driver, 5).until(
+                EC.presence_of_element_located(
+                    (By.XPATH, '//button[@class="btn btn-lg btn-primary pull-xs-right"]'))).click()
+
+            article_title_list = WebDriverWait(self.driver, 5).until(
+                EC.presence_of_all_elements_located((By.XPATH, '//div[@class="article-preview"]//a//h1')))
+            with open("article_title_list.txt", "w") as file:
+                for i in article_title_list:
+                    file.write("1. " + i.text + "\n")
+
+            with open("article_title_list.txt", "r") as read_file:
+                file_text = read_file.read()
+            index = 0
+            for i in article_title_list:
+                assert article_title_list[index].text in file_text
+                index = + 1
+        except:
+            print("hiba")
 

@@ -305,9 +305,11 @@ class TestConduit(object):
 
             article_title_list = WebDriverWait(self.driver, 5).until(
                 EC.presence_of_all_elements_located((By.XPATH, '//div[@class="article-preview"]//a//h1')))
+            count = 1
             with open("article_title_list.txt", "w") as file:
                 for i in article_title_list:
-                    file.write("1. " + i.text + "\n")
+                    file.write(f"{count}.  {i.text} \n")
+                    count += 1
 
             with open("article_title_list.txt", "r") as read_file:
                 file_text = read_file.read()

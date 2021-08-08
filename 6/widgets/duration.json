@@ -1,0 +1,111 @@
+[ {
+  "uid" : "c8e0c3b42ff8d33c",
+  "name" : "test_listing_article_titles_to_file",
+  "time" : {
+    "start" : 1628449800290,
+    "stop" : 1628449801834,
+    "duration" : 1544
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c067fa54e4245ea1",
+  "name" : "test_new_article",
+  "time" : {
+    "start" : 1628449768613,
+    "stop" : 1628449771050,
+    "duration" : 2437
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "2b7b03bcbd33b6ee",
+  "name" : "test_registration",
+  "time" : {
+    "start" : 1628449755978,
+    "stop" : 1628449758542,
+    "duration" : 2564
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ef11571f9df8126e",
+  "name" : "test_creating_comment",
+  "time" : {
+    "start" : 1628449773031,
+    "stop" : 1628449775027,
+    "duration" : 1996
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "87ea20fc11a08356",
+  "name" : "test_save_article_to_file",
+  "time" : {
+    "start" : 1628449791693,
+    "stop" : 1628449794258,
+    "duration" : 2565
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ff8675c35e720780",
+  "name" : "test_article_list",
+  "time" : {
+    "start" : 1628449797046,
+    "stop" : 1628449798481,
+    "duration" : 1435
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "78d9d12488cdfe54",
+  "name" : "test_sign_out",
+  "time" : {
+    "start" : 1628449765851,
+    "stop" : 1628449766808,
+    "duration" : 957
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "efe50c42f6998789",
+  "name" : "test_sign_in",
+  "time" : {
+    "start" : 1628449763224,
+    "stop" : 1628449764052,
+    "duration" : 828
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8b42d3507fa1a4ee",
+  "name" : "test_accept_cookies",
+  "time" : {
+    "start" : 1628449760329,
+    "stop" : 1628449762389,
+    "duration" : 2060
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7f69f36e8b0b94e",
+  "name" : "test_edit_article",
+  "time" : {
+    "start" : 1628449782641,
+    "stop" : 1628449790864,
+    "duration" : 8223
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a97d8012196a9741",
+  "name" : "test_delete_article",
+  "time" : {
+    "start" : 1628449776830,
+    "stop" : 1628449780871,
+    "duration" : 4041
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

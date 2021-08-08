@@ -1,5 +1,4 @@
 import csv
-import random
 import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -12,7 +11,6 @@ from webdriver_manager.chrome import ChromeDriverManager
 browser_options = Options()
 browser_options.headless = True
 driver = webdriver.Chrome(ChromeDriverManager().install(), options=browser_options)
-self.driver = webdriver.Chrome(ChromeDriverManager().install(), options=browser_options)
 
 
 class TestConduit(object):
@@ -25,15 +23,14 @@ class TestConduit(object):
 
     def test_registration(self):
         try:
-            random_num = random.randint(1, 100)
             WebDriverWait(self.driver, 5).until(
                 EC.presence_of_element_located((By.XPATH, '//a[@class="nav-link" and @href="#/register"]'))).click()
             WebDriverWait(self.driver, 5).until(
                 EC.presence_of_element_located((By.XPATH, '//input[@placeholder="Username"]'))).send_keys(
-                f"Gzs{random_num}")
+                "Gzs")
             WebDriverWait(self.driver, 5).until(
                 EC.presence_of_element_located((By.XPATH, '//input[@placeholder="Email"]'))).send_keys(
-                f"gzs{random_num}@gmail.com")
+                "gzs@gmail.com")
             WebDriverWait(self.driver, 5).until(
                 EC.presence_of_element_located((By.XPATH, '//input[@placeholder="Password"]'))).send_keys("Asd12345")
             WebDriverWait(self.driver, 5).until(
@@ -294,7 +291,6 @@ class TestConduit(object):
             assert active_button_text == "2"
         except:
             print("hiba")
-
 
         self.driver = webdriver.Chrome(ChromeDriverManager().install(), options=browser_options)
 

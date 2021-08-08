@@ -8,14 +8,13 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
 
-browser_options = Options()
-browser_options.headless = True
-driver = webdriver.Chrome(ChromeDriverManager().install(), options=browser_options)
-
 
 class TestConduit(object):
     def setup(self):
-        self.driver = webdriver.Chrome("C:\\Users\Zsolt\Desktop\webdriver\\chromedriver.exe")
+        browser_options = Options()
+        browser_options.headless = True
+        driver = webdriver.Chrome(ChromeDriverManager().install(), options=browser_options)
+        self.driver = webdriver.Chrome(ChromeDriverManager().install(), options=browser_options)
         self.driver.get("http://localhost:1667/")
 
     def teardown(self):
@@ -292,5 +291,4 @@ class TestConduit(object):
         except:
             print("hiba")
 
-        self.driver = webdriver.Chrome(ChromeDriverManager().install(), options=browser_options)
 

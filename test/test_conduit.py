@@ -319,4 +319,3 @@ class TestConduit(object):
                 index = + 1
         except:
             print("hiba")
-

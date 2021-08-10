@@ -110,9 +110,10 @@ class TestConduit(object):
         search_element_xpath(self.driver, '//textarea[@placeholder="Write a comment..."]').send_keys("positive comment")
         search_element_xpath(self.driver, '//button[@class="btn btn-sm btn-primary"]').click()
         time.sleep(1)
-        delete_buttons = search_all_element_xpath(self.driver, '//i[@class="ion-trash-a"]')
 
+        delete_buttons = search_all_element_xpath(self.driver, '//i[@class="ion-trash-a"]')
         delete_buttons[0].click()
+
         time.sleep(1)
         delete_buttons2 = self.driver.find_elements_by_xpath('//i[@class="ion-trash-a"]')
         assert len(delete_buttons) > len(delete_buttons2) or delete_buttons2 == []
@@ -165,20 +166,20 @@ class TestConduit(object):
             assert article_title_list[index].text in file_text
             index = + 1
 
-    def test_editing_user_picture(self):
+    def test_editing_user_img(self):
         sign_in(self.driver)
         search_element_xpath(self.driver, '//a[@href="#/@Gzs/"]').click()
-        old_pic_src = search_element_xpath(self.driver, '//img[@class="user-img"]').get_attribute("src")
+        old_img_src = search_element_xpath(self.driver, '//img[@class="user-img"]').get_attribute("src")
 
         search_element_xpath(self.driver, '//a[@href="#/settings" and @class="nav-link"]').click()
 
-        pic_element = search_element_xpath(self.driver, '//input[@placeholder="URL of profile picture"]')
-        pic_element.clear()
-        pic_element.send_keys("https://cdn.pixabay.com/photo/2014/09/20/13/52/board-453758_960_720.jpg")
+        img_input = search_element_xpath(self.driver, '//input[@placeholder="URL of profile picture"]')
+        img_input.clear()
+        img_input.send_keys("https://cdn.pixabay.com/photo/2014/09/20/13/52/board-453758_960_720.jpg")
 
         search_element_xpath(self.driver, '//button[@class="btn btn-lg btn-primary pull-xs-right"]').click()
         search_element_xpath(self.driver, '//button[@class="swal-button swal-button--confirm"]').click()
         search_element_xpath(self.driver, '//a[@href="#/@Gzs/"]').click()
-        new_pic_src = search_element_xpath(self.driver, '//img[@class="user-img"]').get_attribute("src")
+        new_img_src = search_element_xpath(self.driver, '//img[@class="user-img"]').get_attribute("src")
 
-        assert old_pic_src != new_pic_src
+        assert old_img_src != new_img_src

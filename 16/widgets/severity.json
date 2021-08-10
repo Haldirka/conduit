@@ -1,0 +1,111 @@
+[ {
+  "uid" : "c401fef62f901f5b",
+  "name" : "test_registration",
+  "time" : {
+    "start" : 1628613582004,
+    "stop" : 1628613584637,
+    "duration" : 2633
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "4867834d8864b4ce",
+  "name" : "test_listing_article_titles_to_file",
+  "time" : {
+    "start" : 1628613625992,
+    "stop" : 1628613626974,
+    "duration" : 982
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1b29564e543904ce",
+  "name" : "test_article_list",
+  "time" : {
+    "start" : 1628613623493,
+    "stop" : 1628613624376,
+    "duration" : 883
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5e3a4922f36d4c40",
+  "name" : "test_sign_in",
+  "time" : {
+    "start" : 1628613590050,
+    "stop" : 1628613590848,
+    "duration" : 798
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "aa3d5cf07200d5f9",
+  "name" : "test_save_article_to_file",
+  "time" : {
+    "start" : 1628613619184,
+    "stop" : 1628613621801,
+    "duration" : 2617
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8bf5eb6b607f3f77",
+  "name" : "test_creating_comment",
+  "time" : {
+    "start" : 1628613598707,
+    "stop" : 1628613612403,
+    "duration" : 13696
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b382fda03ae9f8bf",
+  "name" : "test_editing_user_img",
+  "time" : {
+    "start" : 1628613628581,
+    "stop" : 1628613632138,
+    "duration" : 3557
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "812407bc4bec0e5f",
+  "name" : "test_sign_out",
+  "time" : {
+    "start" : 1628613592504,
+    "stop" : 1628613593382,
+    "duration" : 878
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "632919b6ebb75262",
+  "name" : "test_delete_comment",
+  "time" : {
+    "start" : 1628613614012,
+    "stop" : 1628613617582,
+    "duration" : 3570
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a9a62df0f62cf1e5",
+  "name" : "test_accept_cookies",
+  "time" : {
+    "start" : 1628613586228,
+    "stop" : 1628613588282,
+    "duration" : 2054
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "fc900ae507e71b97",
+  "name" : "test_new_article",
+  "time" : {
+    "start" : 1628613595000,
+    "stop" : 1628613597067,
+    "duration" : 2067
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

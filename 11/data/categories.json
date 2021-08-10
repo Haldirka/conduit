@@ -1,0 +1,43 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError: assert 10 > 10\n +  where 10 = len([<selenium.webdriver.remote.webelement.WebElement (session=\"6375a46748de04155c66afe409645543\", element=\"db59b8fb-dcad-...belement.WebElement (session=\"6375a46748de04155c66afe409645543\", element=\"6fdaa2c3-ab75-470d-a110-b7983c1a0adb\")>, ...])\n +  and   10 = len([<selenium.webdriver.remote.webelement.WebElement (session=\"6375a46748de04155c66afe409645543\", element=\"db59b8fb-dcad-...belement.WebElement (session=\"6375a46748de04155c66afe409645543\", element=\"6fdaa2c3-ab75-470d-a110-b7983c1a0adb\")>, ...])",
+      "children" : [ {
+        "name" : "test_delete_comment",
+        "uid" : "7691c6f0dd3ec56",
+        "parentUid" : "e87c69e90dd87580449e1fc7f1c9afe4",
+        "status" : "failed",
+        "time" : {
+          "start" : 1628592750753,
+          "stop" : 1628592753778,
+          "duration" : 3025
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "e87c69e90dd87580449e1fc7f1c9afe4"
+    }, {
+      "name" : "AssertionError: assert 'Edit Title\\n...nRead more...' == 'This is an edited title'\n  - This is an edited title\n  + Edit Title\n  + It's all about editing\n  + my favourite tag\n  + Read more...",
+      "children" : [ {
+        "name" : "test_edit_article",
+        "uid" : "a48a1c7595f82fe8",
+        "parentUid" : "f96d5c0c338e3c4cf35b5aa60f9998e3",
+        "status" : "failed",
+        "time" : {
+          "start" : 1628592755542,
+          "stop" : 1628592763505,
+          "duration" : 7963
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "f96d5c0c338e3c4cf35b5aa60f9998e3"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ],
+  "name" : "categories"
+}

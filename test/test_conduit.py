@@ -310,7 +310,7 @@ class TestConduit(object):
         # WebDriverWait(browser, 5).until(
         #     EC.presence_of_element_located((By.XPATH, '//a[@class="nav-link" and @href="#/@Gzs/"]'))).click()
         time.sleep(2)
-        h1_list = search_all_element_xpath(self.driver, '//a[@class="preview-link"]')
+        h1_list = search_all_element_xpath(self.driver, '//a[@class="preview-link"]//h1')
         # h1_list = browser.find_elements_by_xpath('//a[@class="preview-link"]//h1')
         assert h1_list[0].text == "This is an edited title"
 

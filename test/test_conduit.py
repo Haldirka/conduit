@@ -169,6 +169,7 @@ class TestConduit(object):
 
     def test_editing_user_img(self):
         sign_in(self.driver)
+
         search_element_xpath(self.driver, '//a[@href="#/@Gzs/"]').click()
         old_img_src = search_element_xpath(self.driver, '//img[@class="user-img"]').get_attribute("src")
 

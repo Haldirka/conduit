@@ -9,6 +9,24 @@ from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
 
 
+def search_element_xpath(driver, value):
+    element = WebDriverWait(driver, 5).until(
+        EC.presence_of_element_located((By.XPATH, value)))
+    return element
+
+def conduit_login(driver):
+    WebDriverWait(driver, 5).until(
+        EC.presence_of_element_located((By.XPATH, '//a[@class="nav-link" and @href="#/login"]'))).click()
+    WebDriverWait(driver, 5).until(
+        EC.presence_of_element_located((By.XPATH, '//input[@placeholder="Email"]'))).send_keys("gzs@gmail.com")
+    WebDriverWait(driver, 5).until(
+        EC.presence_of_element_located((By.XPATH, '//input[@placeholder="Password"]'))).send_keys("Asd12345")
+    WebDriverWait(driver, 5).until(
+        EC.presence_of_element_located(
+            (By.XPATH, '//button[@class="btn btn-lg btn-primary pull-xs-right"]'))).click()
+
+
+
 class TestConduit(object):
     def setup(self):
         browser_options = Options()
@@ -20,30 +38,36 @@ class TestConduit(object):
         self.driver.quit()
 
     def test_registration(self):
-        try:
-            WebDriverWait(self.driver, 5).until(
-                EC.presence_of_element_located((By.XPATH, '//a[@class="nav-link" and @href="#/register"]'))).click()
-            WebDriverWait(self.driver, 5).until(
-                EC.presence_of_element_located((By.XPATH, '//input[@placeholder="Username"]'))).send_keys(
-                "Gzs")
-            WebDriverWait(self.driver, 5).until(
-                EC.presence_of_element_located((By.XPATH, '//input[@placeholder="Email"]'))).send_keys(
-                "gzs@gmail.com")
-            WebDriverWait(self.driver, 5).until(
-                EC.presence_of_element_located((By.XPATH, '//input[@placeholder="Password"]'))).send_keys("Asd12345")
-            WebDriverWait(self.driver, 5).until(
-                EC.presence_of_element_located(
-                    (By.XPATH, '//button[@class="btn btn-lg btn-primary pull-xs-right"]'))).click()
+        ele = search_element_xpath(self.driver, '//a[@class="nav-link" and @href="#/register"]')
+        ele.click()
+        search_element_xpath(self.driver, '//input[@placeholder="Username"]').send_keys("Gzs")
+        search_element_xpath(self.driver, '//input[@placeholder="Email"]').send_keys("gzs@gmail.com")
+        search_element_xpath(self.driver, '//input[@placeholder="Password"]').send_keys("Asd12345")
+        search_element_xpath(self.driver, '//button[@class="btn btn-lg btn-primary pull-xs-right"]').click()
 
-            WebDriverWait(self.driver, 5).until(
-                EC.presence_of_element_located(
-                    (By.XPATH, '//button[@class="swal-button swal-button--confirm"]'))).click()
-            logout_button = WebDriverWait(self.driver, 5).until(
-                EC.presence_of_element_located((By.XPATH, '//a[@active-class="active"]')))
-            assert logout_button.text == " Log out"
+        search_element_xpath(self.driver, '//button[@class="swal-button swal-button--confirm"]').click()
+        logout_button = search_element_xpath(self.driver, '//a[@active-class="active"]')
+        # WebDriverWait(self.driver, 5).until(
+        #     EC.presence_of_element_located((By.XPATH, '//a[@class="nav-link" and @href="#/register"]'))).click()
+        # WebDriverWait(self.driver, 5).until(
+        #     EC.presence_of_element_located((By.XPATH, '//input[@placeholder="Username"]'))).send_keys(
+        #     "Gzs")
+        # WebDriverWait(self.driver, 5).until(
+        #     EC.presence_of_element_located((By.XPATH, '//input[@placeholder="Email"]'))).send_keys(
+        #     "gzs@gmail.com")
+        # WebDriverWait(self.driver, 5).until(
+        #     EC.presence_of_element_located((By.XPATH, '//input[@placeholder="Password"]'))).send_keys("Asd12345")
+        # WebDriverWait(self.driver, 5).until(
+        #     EC.presence_of_element_located(
+        #         (By.XPATH, '//button[@class="btn btn-lg btn-primary pull-xs-right"]'))).click()
 
-        except:
-            print("hiba")
+        # WebDriverWait(self.driver, 5).until(
+        #     EC.presence_of_element_located(
+        #         (By.XPATH, '//button[@class="swal-button swal-button--confirm"]'))).click()
+        # logout_button = WebDriverWait(self.driver, 5).until(
+        #     EC.presence_of_element_located((By.XPATH, '//a[@active-class="active"]')))
+        assert logout_button.text == " Log out"
+
 
     def test_accept_cookies(self):
         try:
@@ -56,35 +80,32 @@ class TestConduit(object):
             print("hiba")
 
     def test_sign_in(self):
-        try:
-            WebDriverWait(self.driver, 5).until(
-                EC.presence_of_element_located((By.XPATH, '//a[@class="nav-link" and @href="#/login"]'))).click()
-            WebDriverWait(self.driver, 5).until(
-                EC.presence_of_element_located((By.XPATH, '//input[@placeholder="Email"]'))).send_keys("gzs@gmail.com")
-            WebDriverWait(self.driver, 5).until(
-                EC.presence_of_element_located((By.XPATH, '//input[@placeholder="Password"]'))).send_keys("Asd12345")
-            WebDriverWait(self.driver, 5).until(
-                EC.presence_of_element_located(
-                    (By.XPATH, '//button[@class="btn btn-lg btn-primary pull-xs-right"]'))).click()
+        WebDriverWait(self.driver, 5).until(
+            EC.presence_of_element_located((By.XPATH, '//a[@class="nav-link" and @href="#/login"]'))).click()
+        WebDriverWait(self.driver, 5).until(
+            EC.presence_of_element_located((By.XPATH, '//input[@placeholder="Email"]'))).send_keys("gzs@gmail.com")
+        WebDriverWait(self.driver, 5).until(
+            EC.presence_of_element_located((By.XPATH, '//input[@placeholder="Password"]'))).send_keys("Asd12345")
+        WebDriverWait(self.driver, 5).until(
+            EC.presence_of_element_located(
+                (By.XPATH, '//button[@class="btn btn-lg btn-primary pull-xs-right"]'))).click()
+        logout_button = WebDriverWait(self.driver, 5).until(
+            EC.presence_of_element_located((By.XPATH, '//a[@class="nav-link" and @active-class="active"]')))
+        assert logout_button.text == " Log out"
 
-            logout_button = WebDriverWait(self.driver, 5).until(
-                EC.presence_of_element_located((By.XPATH, '//a[@class="nav-link" and @active-class="active"]')))
-            assert logout_button.text == " Log out"
-        except:
-            print("hiba")
 
     def test_sign_out(self):
         try:
-            WebDriverWait(self.driver, 5).until(
-                EC.presence_of_element_located((By.XPATH, '//a[@class="nav-link" and @href="#/login"]'))).click()
-            WebDriverWait(self.driver, 5).until(
-                EC.presence_of_element_located((By.XPATH, '//input[@placeholder="Email"]'))).send_keys("gzs@gmail.com")
-            WebDriverWait(self.driver, 5).until(
-                EC.presence_of_element_located((By.XPATH, '//input[@placeholder="Password"]'))).send_keys("Asd12345")
-            WebDriverWait(self.driver, 5).until(
-                EC.presence_of_element_located(
-                    (By.XPATH, '//button[@class="btn btn-lg btn-primary pull-xs-right"]'))).click()
-
+            # WebDriverWait(self.driver, 5).until(
+            #     EC.presence_of_element_located((By.XPATH, '//a[@class="nav-link" and @href="#/login"]'))).click()
+            # WebDriverWait(self.driver, 5).until(
+            #     EC.presence_of_element_located((By.XPATH, '//input[@placeholder="Email"]'))).send_keys("gzs@gmail.com")
+            # WebDriverWait(self.driver, 5).until(
+            #     EC.presence_of_element_located((By.XPATH, '//input[@placeholder="Password"]'))).send_keys("Asd12345")
+            # WebDriverWait(self.driver, 5).until(
+            #     EC.presence_of_element_located(
+            #         (By.XPATH, '//button[@class="btn btn-lg btn-primary pull-xs-right"]'))).click()
+            conduit_login(self.driver)
             WebDriverWait(self.driver, 5).until(
                 EC.presence_of_element_located((By.XPATH, '//a[@class="nav-link" and @active-class="active"]'))).click()
             login_button = WebDriverWait(self.driver, 5).until(

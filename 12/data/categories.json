@@ -1,0 +1,43 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError: assert 10 > 10\n +  where 10 = len([<selenium.webdriver.remote.webelement.WebElement (session=\"67173fd2c59588143f11c8dd4cf5922a\", element=\"633b0ab3-63f9-...belement.WebElement (session=\"67173fd2c59588143f11c8dd4cf5922a\", element=\"020b5296-edd8-4f9d-91e7-862d947b8586\")>, ...])\n +  and   10 = len([<selenium.webdriver.remote.webelement.WebElement (session=\"67173fd2c59588143f11c8dd4cf5922a\", element=\"633b0ab3-63f9-...belement.WebElement (session=\"67173fd2c59588143f11c8dd4cf5922a\", element=\"020b5296-edd8-4f9d-91e7-862d947b8586\")>, ...])",
+      "children" : [ {
+        "name" : "test_delete_comment",
+        "uid" : "8d2dc5f0a85b622d",
+        "parentUid" : "ff48b5ce453d27068bd76f1bcd3fec0b",
+        "status" : "failed",
+        "time" : {
+          "start" : 1628594735473,
+          "stop" : 1628594738528,
+          "duration" : 3055
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "ff48b5ce453d27068bd76f1bcd3fec0b"
+    }, {
+      "name" : "AssertionError: assert 'Lorem ipsum dolor sit amet' == 'This is an edited title'\n  - This is an edited title\n  + Lorem ipsum dolor sit amet",
+      "children" : [ {
+        "name" : "test_edit_article",
+        "uid" : "676ff9a3d1bb8d4f",
+        "parentUid" : "3fcb477e0ab2eee17d33c9bc4f20619d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1628594740375,
+          "stop" : 1628594748057,
+          "duration" : 7682
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "3fcb477e0ab2eee17d33c9bc4f20619d"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ],
+  "name" : "categories"
+}

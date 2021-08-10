@@ -180,6 +180,7 @@ class TestConduit(object):
 
         search_element_xpath(self.driver, '//button[@class="btn btn-lg btn-primary pull-xs-right"]').click()
         search_element_xpath(self.driver, '//button[@class="swal-button swal-button--confirm"]').click()
+
         search_element_xpath(self.driver, '//a[@href="#/@Gzs/"]').click()
         new_img_src = search_element_xpath(self.driver, '//img[@class="user-img"]').get_attribute("src")
 

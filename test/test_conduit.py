@@ -14,6 +14,11 @@ def search_element_xpath(driver, value):
         EC.presence_of_element_located((By.XPATH, value)))
     return element
 
+def search_all_element_xpath(driver, value):
+    element = WebDriverWait(driver, 5).until(
+        EC.presence_of_all_elements_located((By.XPATH, value)))
+    return element
+
 
 def sign_in(driver):
     search_element_xpath(driver, '//a[@class="nav-link" and @href="#/login"]').click()
@@ -167,18 +172,20 @@ class TestConduit(object):
         assert article_text == "This is the best article i've ever written"
 
     def test_creating_comment(self):
-        WebDriverWait(self.driver, 5).until(
-            EC.presence_of_element_located((By.XPATH, '//a[@class="nav-link" and @href="#/login"]'))).click()
-        WebDriverWait(self.driver, 5).until(
-            EC.presence_of_element_located((By.XPATH, '//input[@placeholder="Email"]'))).send_keys("gzs@gmail.com")
-        WebDriverWait(self.driver, 5).until(
-            EC.presence_of_element_located((By.XPATH, '//input[@placeholder="Password"]'))).send_keys("Asd12345")
-        WebDriverWait(self.driver, 5).until(
-            EC.presence_of_element_located(
-                (By.XPATH, '//button[@class="btn btn-lg btn-primary pull-xs-right"]'))).click()
+        sign_in(self.driver)
+        # WebDriverWait(self.driver, 5).until(
+        #     EC.presence_of_element_located((By.XPATH, '//a[@class="nav-link" and @href="#/login"]'))).click()
+        # WebDriverWait(self.driver, 5).until(
+        #     EC.presence_of_element_located((By.XPATH, '//input[@placeholder="Email"]'))).send_keys("gzs@gmail.com")
+        # WebDriverWait(self.driver, 5).until(
+        #     EC.presence_of_element_located((By.XPATH, '//input[@placeholder="Password"]'))).send_keys("Asd12345")
+        # WebDriverWait(self.driver, 5).until(
+        #     EC.presence_of_element_located(
+        #         (By.XPATH, '//button[@class="btn btn-lg btn-primary pull-xs-right"]'))).click()
 
-        WebDriverWait(self.driver, 5).until(
-            EC.presence_of_element_located((By.XPATH, '//a[@href="#/my-feed"]'))).click()
+        # WebDriverWait(self.driver, 5).until(
+        #     EC.presence_of_element_located((By.XPATH, '//a[@href="#/my-feed"]'))).click()
+        search_element_xpath(self.driver, '//a[@href="#/my-feed"]').click()
         time.sleep(1)
         h1_list = self.driver.find_elements_by_xpath('//a[@class="preview-link"]')
         h1_list[0].click()
@@ -187,68 +194,107 @@ class TestConduit(object):
             file_text_list = list(file_text)
         time.sleep(1)
         for i in file_text_list:
-            WebDriverWait(self.driver, 5).until(
-                EC.presence_of_element_located(
-                    (By.XPATH, '//textarea[@placeholder="Write a comment..."]'))).send_keys(
-                i)
-            WebDriverWait(self.driver, 5).until(
-                EC.presence_of_element_located((By.XPATH, '//button[@class="btn btn-sm btn-primary"]'))).click()
+            search_element_xpath(self.driver, '//textarea[@placeholder="Write a comment..."]').send_keys(i)
+            search_element_xpath(self.driver, '//button[@class="btn btn-sm btn-primary"]').click()
+            # WebDriverWait(self.driver, 5).until(
+            #     EC.presence_of_element_located(
+            #         (By.XPATH, '//textarea[@placeholder="Write a comment..."]'))).send_keys(
+            # #     i)
+            # WebDriverWait(self.driver, 5).until(
+            #     EC.presence_of_element_located((By.XPATH, '//button[@class="btn btn-sm btn-primary"]'))).click()
             time.sleep(1)
-        comment_text = WebDriverWait(self.driver, 5).until(
-            EC.presence_of_all_elements_located((By.XPATH, '//p[@class="card-text"]')))
+        comment_text = search_all_element_xpath(self.driver, '//p[@class="card-text"]')
+        # comment_text = WebDriverWait(self.driver, 5).until(
+        #     EC.presence_of_all_elements_located((By.XPATH, '//p[@class="card-text"]')))
         assert comment_text[0].text == "10. komment"
 
-    def test_delete_article(self):
-        WebDriverWait(self.driver, 5).until(
-            EC.presence_of_element_located((By.XPATH, '//a[@class="nav-link" and @href="#/login"]'))).click()
-        WebDriverWait(self.driver, 5).until(
-            EC.presence_of_element_located((By.XPATH, '//input[@placeholder="Email"]'))).send_keys("gzs@gmail.com")
-        WebDriverWait(self.driver, 5).until(
-            EC.presence_of_element_located((By.XPATH, '//input[@placeholder="Password"]'))).send_keys("Asd12345")
-        WebDriverWait(self.driver, 5).until(
-            EC.presence_of_element_located(
-                (By.XPATH, '//button[@class="btn btn-lg btn-primary pull-xs-right"]'))).click()
-
-        WebDriverWait(self.driver, 5).until(
-            EC.presence_of_element_located((By.XPATH, '//a[@class="nav-link" and @href="#/@Gzs/"]'))).click()
-        time.sleep(1)
-        h1_list = self.driver.find_elements_by_xpath('//a[@class="preview-link"]')
+    def test_delete_comment(self):
+        sign_in(self.driver)
+        # WebDriverWait(self.driver, 5).until(
+        #     EC.presence_of_element_located((By.XPATH, '//a[@class="nav-link" and @href="#/login"]'))).click()
+        # WebDriverWait(self.driver, 5).until(
+        #     EC.presence_of_element_located((By.XPATH, '//input[@placeholder="Email"]'))).send_keys("gzs@gmail.com")
+        # WebDriverWait(self.driver, 5).until(
+        #     EC.presence_of_element_located((By.XPATH, '//input[@placeholder="Password"]'))).send_keys("Asd12345")
+        # WebDriverWait(self.driver, 5).until(
+        #     EC.presence_of_element_located(
+        #         (By.XPATH, '//button[@class="btn btn-lg btn-primary pull-xs-right"]'))).click()
+        h1_list = search_all_element_xpath(self.driver, '//a[@class="preview-link"]')
+        # h1_list = WebDriverWait(browser, 5).until(
+        #     EC.presence_of_all_elements_located((By.XPATH, '//a[@class="preview-link"]')))
         h1_list[0].click()
-        WebDriverWait(self.driver, 5).until(
-            EC.presence_of_element_located((By.XPATH, '//button[@class="btn btn-outline-danger btn-sm"]'))).click()
+
+        delete_buttons = search_all_element_xpath(self.driver, '//i[@class="ion-trash-a"]')
+        # delete_buttons = WebDriverWait(browser, 5).until(
+        #     EC.presence_of_all_elements_located((By.XPATH, '//i[@class="ion-trash-a"]')))
+        # delete_buttons[0].click()
         time.sleep(1)
-        WebDriverWait(self.driver, 5).until(
-            EC.presence_of_element_located((By.XPATH, '//a[@class="nav-link" and @href="#/@Gzs/"]'))).click()
-        h1_list2 = self.driver.find_elements_by_xpath('//a[@class="preview-link"]')
-        assert len(h1_list) > len(h1_list2)
+        delete_buttons2 = search_all_element_xpath(self.driver, '//i[@class="ion-trash-a"]')
+        # delete_buttons2 = browser.find_elements_by_xpath('//i[@class="ion-trash-a"]')
+        assert len(delete_buttons) > len(delete_buttons2)
 
     def test_edit_article(self):
-        WebDriverWait(self.driver, 5).until(
-            EC.presence_of_element_located((By.XPATH, '//a[@class="nav-link" and @href="#/login"]'))).click()
-        WebDriverWait(self.driver, 5).until(
-            EC.presence_of_element_located((By.XPATH, '//input[@placeholder="Email"]'))).send_keys("gzs@gmail.com")
-        WebDriverWait(self.driver, 5).until(
-            EC.presence_of_element_located((By.XPATH, '//input[@placeholder="Password"]'))).send_keys("Asd12345")
-        WebDriverWait(self.driver, 5).until(
-            EC.presence_of_element_located(
-                (By.XPATH, '//button[@class="btn btn-lg btn-primary pull-xs-right"]'))).click()
+        sign_in(self.driver)
+        # WebDriverWait(self.driver, 5).until(
+        #     EC.presence_of_element_located((By.XPATH, '//a[@class="nav-link" and @href="#/login"]'))).click()
+        # WebDriverWait(self.driver, 5).until(
+        #     EC.presence_of_element_located((By.XPATH, '//input[@placeholder="Email"]'))).send_keys("gzs@gmail.com")
+        # WebDriverWait(self.driver, 5).until(
+        #     EC.presence_of_element_located((By.XPATH, '//input[@placeholder="Password"]'))).send_keys("Asd12345")
+        # WebDriverWait(self.driver, 5).until(
+        #     EC.presence_of_element_located(
+        #         (By.XPATH, '//button[@class="btn btn-lg btn-primary pull-xs-right"]'))).click()
+        search_element_xpath(self.driver, '//a[@class="nav-link" and @href="#/editor"]').click()
+        search_element_xpath(self.driver, '//input[@placeholder="Article Title"]').send_keys("Edit Title")
+        search_element_xpath(self.driver, '//input[@type="text" and @class="form-control"]').send_keys("It's all about editing")
+        search_element_xpath(self.driver, '//textarea[@placeholder="Write your article (in markdown)"]').send_keys("This is going to be edited")
+        search_element_xpath(self.driver, '//input[@placeholder="Enter tags"]').send_keys("my favourite tag", Keys.RETURN)
+        search_element_xpath(self.driver, '//button[@type="submit"]').click()
 
-        WebDriverWait(self.driver, 5).until(
-            EC.presence_of_element_located((By.XPATH, '//a[@class="nav-link" and @href="#/@Gzs/"]'))).click()
+        search_element_xpath(self.driver, '//a[@class="nav-link" and @href="#/@Gzs/"]').click()
+
         time.sleep(2)
-        h1_list = self.driver.find_elements_by_xpath('//a[@class="preview-link"]')
+        h1_list = search_all_element_xpath(self.driver, '//a[@class="preview-link"]')
         h1_list[0].click()
-        WebDriverWait(self.driver, 5).until(
-            EC.presence_of_element_located((By.XPATH, '//a[@class="btn btn-sm btn-outline-secondary"]'))).click()
+        search_element_xpath(self.driver, '//a[@class="btn btn-sm btn-outline-secondary"]').click()
+        # WebDriverWait(browser, 5).until(
+        #     EC.presence_of_element_located((By.XPATH, '//a[@class="nav-link" and @href="#/editor"]'))).click()
 
-        title = WebDriverWait(self.driver, 5).until(
-            EC.presence_of_element_located((By.XPATH, '//input[@placeholder="Article Title"]')))
-        about = WebDriverWait(self.driver, 5).until(
-            EC.presence_of_element_located((By.XPATH, '//input[@type="text" and @class="form-control"]')))
-        text = WebDriverWait(self.driver, 5).until(EC.presence_of_element_located(
-            (By.XPATH, '//textarea[@placeholder="Write your article (in markdown)"]')))
-        tag = WebDriverWait(self.driver, 5).until(
-            EC.presence_of_element_located((By.XPATH, '//input[@placeholder="Enter tags"]')))
+        # WebDriverWait(browser, 5).until(
+        #     EC.presence_of_element_located((By.XPATH, '//input[@placeholder="Article Title"]'))).send_keys("Edit Title")
+        # WebDriverWait(browser, 5).until(
+        #     EC.presence_of_element_located((By.XPATH, '//input[@type="text" and @class="form-control"]'))).send_keys(
+        #     "It's all about editing")
+        # WebDriverWait(browser, 5).until(
+        #     EC.presence_of_element_located(
+        #         (By.XPATH, '//textarea[@placeholder="Write your article (in markdown)"]'))).send_keys(
+        #     "This is going to be edited")
+        # WebDriverWait(browser, 5).until(
+        #     EC.presence_of_element_located((By.XPATH, '//input[@placeholder="Enter tags"]'))).send_keys(
+        #     "my favourite tag",
+        #     Keys.RETURN)
+        # WebDriverWait(browser, 5).until(
+        #     EC.presence_of_element_located((By.XPATH, '//button[@type="submit"]'))).click()
+
+        # WebDriverWait(browser, 5).until(
+        #     EC.presence_of_element_located((By.XPATH, '//a[@class="nav-link" and @href="#/@Gzs/"]'))).click()
+        # h1_list = browser.find_elements_by_xpath('//a[@class="preview-link"]')
+        # h1_list[0].click()
+        # WebDriverWait(browser, 5).until(
+        #     EC.presence_of_element_located((By.XPATH, '//a[@class="btn btn-sm btn-outline-secondary"]'))).click()
+        title = search_element_xpath(self.driver, '//input[@placeholder="Article Title"]')
+        about = search_element_xpath(self.driver, '//input[@type="text" and @class="form-control"]')
+        text = search_element_xpath(self.driver, '//textarea[@placeholder="Write your article (in markdown)"]')
+        tag = search_element_xpath(self.driver, '//input[@placeholder="Enter tags"]')
+
+        # title = WebDriverWait(browser, 5).until(
+        #     EC.presence_of_element_located((By.XPATH, '//input[@placeholder="Article Title"]')))
+        # about = WebDriverWait(browser, 5).until(
+        #     EC.presence_of_element_located((By.XPATH, '//input[@type="text" and @class="form-control"]')))
+        # text = WebDriverWait(browser, 5).until(EC.presence_of_element_located(
+        #     (By.XPATH, '//textarea[@placeholder="Write your article (in markdown)"]')))
+        # tag = WebDriverWait(browser, 5).until(
+        #     EC.presence_of_element_located((By.XPATH, '//input[@placeholder="Enter tags"]')))
         title.clear()
         title.send_keys("This is an edited title")
         about.clear()
@@ -257,32 +303,39 @@ class TestConduit(object):
         text.send_keys("This is already edited")
         tag.clear()
         tag.send_keys("not my favourite tag", Keys.RETURN)
-        WebDriverWait(self.driver, 5).until(
-            EC.presence_of_element_located((By.XPATH, '//button[@type="submit"]'))).click()
-        WebDriverWait(self.driver, 5).until(
-            EC.presence_of_element_located((By.XPATH, '//a[@class="nav-link" and @href="#/@Gzs/"]'))).click()
+        search_element_xpath(self.driver, '//button[@type="submit"]').click()
+        search_element_xpath(self.driver, '//a[@class="nav-link" and @href="#/@Gzs/"]').click()
+        #
+        # WebDriverWait(browser, 5).until(EC.presence_of_element_located((By.XPATH, '//button[@type="submit"]'))).click()
+        # WebDriverWait(browser, 5).until(
+        #     EC.presence_of_element_located((By.XPATH, '//a[@class="nav-link" and @href="#/@Gzs/"]'))).click()
         time.sleep(2)
-        h1_list = self.driver.find_elements_by_xpath('//a[@class="preview-link"]//h1')
+        h1_list = search_all_element_xpath(self.driver, '//a[@class="preview-link"]')
+        # h1_list = browser.find_elements_by_xpath('//a[@class="preview-link"]//h1')
         assert h1_list[0].text == "This is an edited title"
 
     def test_save_article_to_file(self):
-        WebDriverWait(self.driver, 5).until(
-            EC.presence_of_element_located((By.XPATH, '//a[@class="nav-link" and @href="#/login"]'))).click()
-        WebDriverWait(self.driver, 5).until(
-            EC.presence_of_element_located((By.XPATH, '//input[@placeholder="Email"]'))).send_keys("gzs@gmail.com")
-        WebDriverWait(self.driver, 5).until(
-            EC.presence_of_element_located((By.XPATH, '//input[@placeholder="Password"]'))).send_keys("Asd12345")
-        WebDriverWait(self.driver, 5).until(
-            EC.presence_of_element_located(
-                (By.XPATH, '//button[@class="btn btn-lg btn-primary pull-xs-right"]'))).click()
+        sign_in(self.driver)
+        # WebDriverWait(self.driver, 5).until(
+        #     EC.presence_of_element_located((By.XPATH, '//a[@class="nav-link" and @href="#/login"]'))).click()
+        # WebDriverWait(self.driver, 5).until(
+        #     EC.presence_of_element_located((By.XPATH, '//input[@placeholder="Email"]'))).send_keys("gzs@gmail.com")
+        # WebDriverWait(self.driver, 5).until(
+        #     EC.presence_of_element_located((By.XPATH, '//input[@placeholder="Password"]'))).send_keys("Asd12345")
+        # WebDriverWait(self.driver, 5).until(
+        #     EC.presence_of_element_located(
+        #         (By.XPATH, '//button[@class="btn btn-lg btn-primary pull-xs-right"]'))).click()
+        search_element_xpath(self.driver, '//a[@href="#/my-feed"]').click()
 
         WebDriverWait(self.driver, 5).until(
             EC.presence_of_element_located((By.XPATH, '//a[@href="#/my-feed"]'))).click()
         time.sleep(1)
         h1_list = self.driver.find_elements_by_xpath('//a[@class="preview-link"]')
         h1_list[0].click()
-        textarea = WebDriverWait(self.driver, 5).until(
-            EC.presence_of_element_located((By.XPATH, '//div[@class="col-xs-12"]//div//p')))
+
+        textarea = search_element_xpath(self.driver, '//div[@class="col-xs-12"]//div//p')
+        # textarea = WebDriverWait(self.driver, 5).until(
+        #     EC.presence_of_element_located((By.XPATH, '//div[@class="col-xs-12"]//div//p')))
 
         with open("textfromarticle.txt", "w", encoding="utf-8") as file:
             file.write(textarea.text)
@@ -292,15 +345,16 @@ class TestConduit(object):
         assert textarea.text == file_text
 
     def test_article_list(self):
-        WebDriverWait(self.driver, 5).until(
-            EC.presence_of_element_located((By.XPATH, '//a[@class="nav-link" and @href="#/login"]'))).click()
-        WebDriverWait(self.driver, 5).until(
-            EC.presence_of_element_located((By.XPATH, '//input[@placeholder="Email"]'))).send_keys("gzs@gmail.com")
-        WebDriverWait(self.driver, 5).until(
-            EC.presence_of_element_located((By.XPATH, '//input[@placeholder="Password"]'))).send_keys("Asd12345")
-        WebDriverWait(self.driver, 5).until(
-            EC.presence_of_element_located(
-                (By.XPATH, '//button[@class="btn btn-lg btn-primary pull-xs-right"]'))).click()
+        sign_in(self.driver)
+        # WebDriverWait(self.driver, 5).until(
+        #     EC.presence_of_element_located((By.XPATH, '//a[@class="nav-link" and @href="#/login"]'))).click()
+        # WebDriverWait(self.driver, 5).until(
+        #     EC.presence_of_element_located((By.XPATH, '//input[@placeholder="Email"]'))).send_keys("gzs@gmail.com")
+        # WebDriverWait(self.driver, 5).until(
+        #     EC.presence_of_element_located((By.XPATH, '//input[@placeholder="Password"]'))).send_keys("Asd12345")
+        # WebDriverWait(self.driver, 5).until(
+        #     EC.presence_of_element_located(
+        #         (By.XPATH, '//button[@class="btn btn-lg btn-primary pull-xs-right"]'))).click()
 
         buttons = WebDriverWait(self.driver, 5).until(
             EC.presence_of_all_elements_located((By.XPATH, '//a[@class="page-link"]')))
@@ -312,15 +366,16 @@ class TestConduit(object):
         assert active_button_text == "2"
 
     def test_listing_article_titles_to_file(self):
-        WebDriverWait(self.driver, 5).until(
-            EC.presence_of_element_located((By.XPATH, '//a[@class="nav-link" and @href="#/login"]'))).click()
-        WebDriverWait(self.driver, 5).until(
-            EC.presence_of_element_located((By.XPATH, '//input[@placeholder="Email"]'))).send_keys("gzs@gmail.com")
-        WebDriverWait(self.driver, 5).until(
-            EC.presence_of_element_located((By.XPATH, '//input[@placeholder="Password"]'))).send_keys("Asd12345")
-        WebDriverWait(self.driver, 5).until(
-            EC.presence_of_element_located(
-                (By.XPATH, '//button[@class="btn btn-lg btn-primary pull-xs-right"]'))).click()
+        sign_in(self.driver)
+        # WebDriverWait(self.driver, 5).until(
+        #     EC.presence_of_element_located((By.XPATH, '//a[@class="nav-link" and @href="#/login"]'))).click()
+        # WebDriverWait(self.driver, 5).until(
+        #     EC.presence_of_element_located((By.XPATH, '//input[@placeholder="Email"]'))).send_keys("gzs@gmail.com")
+        # WebDriverWait(self.driver, 5).until(
+        #     EC.presence_of_element_located((By.XPATH, '//input[@placeholder="Password"]'))).send_keys("Asd12345")
+        # WebDriverWait(self.driver, 5).until(
+        #     EC.presence_of_element_located(
+        #         (By.XPATH, '//button[@class="btn btn-lg btn-primary pull-xs-right"]'))).click()
 
         article_title_list = WebDriverWait(self.driver, 5).until(
             EC.presence_of_all_elements_located((By.XPATH, '//div[@class="article-preview"]//a//h1')))

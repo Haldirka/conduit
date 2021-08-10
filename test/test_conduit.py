@@ -60,6 +60,7 @@ class TestConduit(object):
         search_element_xpath(self.driver, '//input[@placeholder="Email"]').send_keys("gzs@gmail.com")
         search_element_xpath(self.driver, '//input[@placeholder="Password"]').send_keys("Asd12345")
         search_element_xpath(self.driver, '//button[@class="btn btn-lg btn-primary pull-xs-right"]').click()
+
         logout_button = search_element_xpath(self.driver, '//a[@class="nav-link" and @active-class="active"]')
         assert logout_button.text == " Log out"
 

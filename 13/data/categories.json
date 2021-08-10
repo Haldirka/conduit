@@ -6,13 +6,13 @@
       "name" : "AssertionError: assert 'Lorem ipsum dolor sit amet' == 'This is an edited title'\n  - This is an edited title\n  + Lorem ipsum dolor sit amet",
       "children" : [ {
         "name" : "test_edit_article",
-        "uid" : "e7181b73846eede1",
+        "uid" : "6c8938ba4e5af38d",
         "parentUid" : "3fcb477e0ab2eee17d33c9bc4f20619d",
         "status" : "failed",
         "time" : {
-          "start" : 1628596029928,
-          "stop" : 1628596037128,
-          "duration" : 7200
+          "start" : 1628602082826,
+          "stop" : 1628602090553,
+          "duration" : 7727
         },
         "flaky" : false,
         "newFailed" : false,

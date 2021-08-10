@@ -1,12 +1,12 @@
 {
-  "uid" : "365a9ae410259fe4",
+  "uid" : "2e6d80696e62873",
   "name" : "test_sign_in",
   "fullName" : "test.test_conduit.TestConduit#test_sign_in",
   "historyId" : "6d2dee1f58ea7b8eefd2d230e163651a",
   "time" : {
-    "start" : 1628595999803,
-    "stop" : 1628596000596,
-    "duration" : 793
+    "start" : 1628602052045,
+    "stop" : 1628602052885,
+    "duration" : 840
   },
   "status" : "passed",
   "flaky" : false,
@@ -16,23 +16,23 @@
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ {
-      "uid" : "412ba7f477316234",
+      "uid" : "44e1e7999fb4d3ce",
       "name" : "log",
-      "source" : "412ba7f477316234.txt",
+      "source" : "44e1e7999fb4d3ce.txt",
       "type" : "text/plain",
       "size" : 344
     }, {
-      "uid" : "75fc14af82be48f1",
+      "uid" : "c36d8bd32e323054",
       "name" : "stderr",
-      "source" : "75fc14af82be48f1.txt",
+      "source" : "c36d8bd32e323054.txt",
       "type" : "text/plain",
       "size" : 215
     } ],
     "parameters" : [ ],
-    "shouldDisplayMessage" : false,
-    "hasContent" : true,
     "stepsCount" : 0,
-    "attachmentsCount" : 2
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
   },
   "afterStages" : [ ],
   "labels" : [ {
@@ -46,10 +46,10 @@
     "value" : "TestConduit"
   }, {
     "name" : "host",
-    "value" : "fv-az36-633"
+    "value" : "fv-az33-714"
   }, {
     "name" : "thread",
-    "value" : "3755-MainThread"
+    "value" : "3772-MainThread"
   }, {
     "name" : "framework",
     "value" : "pytest"
@@ -73,6 +73,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "365a9ae410259fe4.json",
+  "source" : "2e6d80696e62873.json",
   "parameterValues" : [ ]
 }

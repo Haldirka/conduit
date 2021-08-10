@@ -1,12 +1,12 @@
 {
-  "uid" : "ff73f206cc46bd2a",
+  "uid" : "16045d7c6580caba",
   "name" : "test_save_article_to_file",
   "fullName" : "test.test_conduit.TestConduit#test_save_article_to_file",
   "historyId" : "4ee59b307d4d7e00458de214c02fd860",
   "time" : {
-    "start" : 1628596038819,
-    "stop" : 1628596041560,
-    "duration" : 2741
+    "start" : 1628602092274,
+    "stop" : 1628602095097,
+    "duration" : 2823
   },
   "status" : "passed",
   "flaky" : false,
@@ -16,23 +16,23 @@
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ {
-      "uid" : "2d16778f2a7811c6",
+      "uid" : "182e97268e20d164",
       "name" : "log",
-      "source" : "2d16778f2a7811c6.txt",
+      "source" : "182e97268e20d164.txt",
       "type" : "text/plain",
       "size" : 344
     }, {
-      "uid" : "ff282e61624ab8ed",
+      "uid" : "52e459e994c13a13",
       "name" : "stderr",
-      "source" : "ff282e61624ab8ed.txt",
+      "source" : "52e459e994c13a13.txt",
       "type" : "text/plain",
       "size" : 215
     } ],
     "parameters" : [ ],
-    "shouldDisplayMessage" : false,
-    "hasContent" : true,
     "stepsCount" : 0,
-    "attachmentsCount" : 2
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
   },
   "afterStages" : [ ],
   "labels" : [ {
@@ -46,10 +46,10 @@
     "value" : "TestConduit"
   }, {
     "name" : "host",
-    "value" : "fv-az36-633"
+    "value" : "fv-az33-714"
   }, {
     "name" : "thread",
-    "value" : "3755-MainThread"
+    "value" : "3772-MainThread"
   }, {
     "name" : "framework",
     "value" : "pytest"
@@ -73,6 +73,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "ff73f206cc46bd2a.json",
+  "source" : "16045d7c6580caba.json",
   "parameterValues" : [ ]
 }

@@ -394,3 +394,21 @@ class TestConduit(object):
         for i in article_title_list:
             assert article_title_list[index].text in file_text
             index = + 1
+
+    def test_editing_user_picture(self):
+        sign_in(self.driver)
+        search_element_xpath(self.driver, '//a[@href="#/@Gzs/"]').click()
+        old_pic_src = search_element_xpath(self.driver, '//img[@class="user-img"]').get_attribute("src")
+
+        search_element_xpath(self.driver, '//a[@href="#/settings" and @class="nav-link"]').click()
+
+        pic_element = search_element_xpath(self.driver, '//input[@placeholder="URL of profile picture"]')
+        pic_element.clear()
+        pic_element.send_keys("https://cdn.pixabay.com/photo/2014/09/20/13/52/board-453758_960_720.jpg")
+
+        search_element_xpath(self.driver, '//button[@class="btn btn-lg btn-primary pull-xs-right"]').click()
+        search_element_xpath(self.driver, '//button[@class="swal-button swal-button--confirm"]').click()
+        search_element_xpath(self.driver, '//a[@href="#/@Gzs/"]').click()
+        new_pic_src = search_element_xpath(self.driver, '//img[@class="user-img"]').get_attribute("src")
+
+        assert old_pic_src != new_pic_src

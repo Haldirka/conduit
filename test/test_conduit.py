@@ -224,14 +224,17 @@ class TestConduit(object):
         #     EC.presence_of_all_elements_located((By.XPATH, '//a[@class="preview-link"]')))
         h1_list[0].click()
 
+        search_element_xpath(self.driver, '//textarea[@placeholder="Write a comment..."]').send_keys("positive comment")
+        search_element_xpath(self.driver, '//button[@class="btn btn-sm btn-primary"]').click()
+        time.sleep(1)
         delete_buttons = search_all_element_xpath(self.driver, '//i[@class="ion-trash-a"]')
         # delete_buttons = WebDriverWait(browser, 5).until(
         #     EC.presence_of_all_elements_located((By.XPATH, '//i[@class="ion-trash-a"]')))
-        # delete_buttons[0].click()
+        delete_buttons[0].click()
         time.sleep(1)
-        delete_buttons2 = search_all_element_xpath(self.driver, '//i[@class="ion-trash-a"]')
+        delete_buttons2 = self.driver.find_elements_by_xpath('//i[@class="ion-trash-a"]')
         # delete_buttons2 = browser.find_elements_by_xpath('//i[@class="ion-trash-a"]')
-        assert len(delete_buttons) > len(delete_buttons2)
+        assert len(delete_buttons) > len(delete_buttons2) or delete_buttons2 == []
 
     def test_edit_article(self):
         sign_in(self.driver)

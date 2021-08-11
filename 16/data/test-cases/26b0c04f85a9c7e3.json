@@ -1,12 +1,12 @@
 {
-  "uid" : "8bf5eb6b607f3f77",
-  "name" : "test_creating_comment",
-  "fullName" : "test.test_conduit.TestConduit#test_creating_comment",
-  "historyId" : "198caaf754781e26c157c3a0789b5228",
+  "uid" : "26b0c04f85a9c7e3",
+  "name" : "test_registration",
+  "fullName" : "test.test_conduit.TestConduit#test_registration",
+  "historyId" : "449695f6039cc9b1b387a819d6e9ef14",
   "time" : {
-    "start" : 1628613598707,
-    "stop" : 1628613612403,
-    "duration" : 13696
+    "start" : 1628703924567,
+    "stop" : 1628703927321,
+    "duration" : 2754
   },
   "status" : "passed",
   "flaky" : false,
@@ -16,17 +16,17 @@
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ {
-      "uid" : "582a66685554d534",
+      "uid" : "24a8447035676c1a",
       "name" : "log",
-      "source" : "582a66685554d534.txt",
+      "source" : "24a8447035676c1a.txt",
       "type" : "text/plain",
-      "size" : 344
+      "size" : 642
     }, {
-      "uid" : "5c9bf9cd73592c81",
+      "uid" : "ae1ba1c49bf479da",
       "name" : "stderr",
-      "source" : "5c9bf9cd73592c81.txt",
+      "source" : "ae1ba1c49bf479da.txt",
       "type" : "text/plain",
-      "size" : 215
+      "size" : 435
     } ],
     "parameters" : [ ],
     "stepsCount" : 0,
@@ -49,7 +49,7 @@
     "value" : "fv-az33-581"
   }, {
     "name" : "thread",
-    "value" : "3823-MainThread"
+    "value" : "3815-MainThread"
   }, {
     "name" : "framework",
     "value" : "pytest"
@@ -73,6 +73,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "8bf5eb6b607f3f77.json",
+  "source" : "26b0c04f85a9c7e3.json",
   "parameterValues" : [ ]
 }

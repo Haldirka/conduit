@@ -9,6 +9,7 @@ from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
 
 
+
 def search_element_xpath(driver, value):
     element = WebDriverWait(driver, 5).until(
         EC.presence_of_element_located((By.XPATH, value)))

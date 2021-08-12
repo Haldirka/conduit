@@ -1,26 +1,5 @@
 {
   "uid" : "4b4757e66a1912dae1a509f688f20b0f",
-  "children" : [ {
-    "name" : "Product defects",
-    "children" : [ {
-      "name" : "AssertionError: assert 'https://static.productionready.io/images/smiley-cyrus.jpg' != 'https://static.productionready.io/images/smiley-cyrus.jpg'",
-      "children" : [ {
-        "name" : "test_editing_user_img",
-        "uid" : "e386a79770f59a2b",
-        "parentUid" : "13f9bbb04991e6ac77548ba71c6d0a14",
-        "status" : "failed",
-        "time" : {
-          "start" : 1628787298855,
-          "stop" : 1628787301788,
-          "duration" : 2933
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "13f9bbb04991e6ac77548ba71c6d0a14"
-    } ],
-    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
-  } ],
+  "children" : [ ],
   "name" : "categories"
 }

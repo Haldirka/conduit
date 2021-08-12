@@ -1,12 +1,12 @@
 {
-  "uid" : "82d74e28606525a9",
+  "uid" : "76357da132ac6e99",
   "name" : "test_new_article",
   "fullName" : "test.test_conduit.TestConduit#test_new_article",
   "historyId" : "3fd5da21786a83b13d1a6196e5ce0260",
   "time" : {
-    "start" : 1628787266096,
-    "stop" : 1628787267550,
-    "duration" : 1454
+    "start" : 1628787821210,
+    "stop" : 1628787823610,
+    "duration" : 2400
   },
   "status" : "passed",
   "flaky" : false,
@@ -16,23 +16,23 @@
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ {
-      "uid" : "afa04ebaa2c13e9",
+      "uid" : "ca56a3cd5e8bb0d8",
       "name" : "log",
-      "source" : "afa04ebaa2c13e9.txt",
+      "source" : "ca56a3cd5e8bb0d8.txt",
       "type" : "text/plain",
       "size" : 344
     }, {
-      "uid" : "af22315611bada62",
+      "uid" : "5c0cd75984be7acf",
       "name" : "stderr",
-      "source" : "af22315611bada62.txt",
+      "source" : "5c0cd75984be7acf.txt",
       "type" : "text/plain",
       "size" : 215
     } ],
     "parameters" : [ ],
-    "stepsCount" : 0,
     "attachmentsCount" : 2,
     "shouldDisplayMessage" : false,
-    "hasContent" : true
+    "hasContent" : true,
+    "stepsCount" : 0
   },
   "afterStages" : [ ],
   "labels" : [ {
@@ -46,10 +46,10 @@
     "value" : "TestConduit"
   }, {
     "name" : "host",
-    "value" : "fv-az36-97"
+    "value" : "fv-az77-489"
   }, {
     "name" : "thread",
-    "value" : "3685-MainThread"
+    "value" : "3661-MainThread"
   }, {
     "name" : "framework",
     "value" : "pytest"
@@ -73,6 +73,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "82d74e28606525a9.json",
+  "source" : "76357da132ac6e99.json",
   "parameterValues" : [ ]
 }

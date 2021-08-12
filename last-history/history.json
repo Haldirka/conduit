@@ -9,38 +9,17 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "bc0c1be583a30d82",
-      "reportUrl" : "https://Haldirka.github.io/conduit/18//#testresult/bc0c1be583a30d82",
+      "uid" : "4bac823e7de73ec4",
+      "reportUrl" : "https://Haldirka.github.io/conduit/18//#testresult/4bac823e7de73ec4",
       "status" : "passed",
       "time" : {
-        "start" : 1628787259591,
-        "stop" : 1628787261644,
-        "duration" : 2053
+        "start" : 1628787812358,
+        "stop" : 1628787814410,
+        "duration" : 2052
       }
     } ]
   },
   "291f655a074324797f0673b70d716c0f" : {
-    "statistic" : {
-      "failed" : 1,
-      "broken" : 0,
-      "skipped" : 0,
-      "passed" : 0,
-      "unknown" : 0,
-      "total" : 1
-    },
-    "items" : [ {
-      "uid" : "e386a79770f59a2b",
-      "reportUrl" : "https://Haldirka.github.io/conduit/18//#testresult/e386a79770f59a2b",
-      "status" : "failed",
-      "statusDetails" : "AssertionError: assert 'https://static.productionready.io/images/smiley-cyrus.jpg' != 'https://static.productionready.io/images/smiley-cyrus.jpg'",
-      "time" : {
-        "start" : 1628787298855,
-        "stop" : 1628787301788,
-        "duration" : 2933
-      }
-    } ]
-  },
-  "4b793c35dada08fe9559e952b60b075a" : {
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
@@ -50,13 +29,13 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "627acf003bf834e1",
-      "reportUrl" : "https://Haldirka.github.io/conduit/18//#testresult/627acf003bf834e1",
+      "uid" : "9f8451da42e8ef8b",
+      "reportUrl" : "https://Haldirka.github.io/conduit/18//#testresult/9f8451da42e8ef8b",
       "status" : "passed",
       "time" : {
-        "start" : 1628787264628,
-        "stop" : 1628787265499,
-        "duration" : 871
+        "start" : 1628787853199,
+        "stop" : 1628787855699,
+        "duration" : 2500
       }
     } ]
   },
@@ -70,17 +49,17 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "4425ad1ad8e976da",
-      "reportUrl" : "https://Haldirka.github.io/conduit/18//#testresult/4425ad1ad8e976da",
+      "uid" : "d734b84cddb0ac18",
+      "reportUrl" : "https://Haldirka.github.io/conduit/18//#testresult/d734b84cddb0ac18",
       "status" : "passed",
       "time" : {
-        "start" : 1628787269160,
-        "stop" : 1628787282806,
-        "duration" : 13646
+        "start" : 1628787824343,
+        "stop" : 1628787837998,
+        "duration" : 13655
       }
     } ]
   },
-  "b13abe8dea944e6ace929e59c359b78e" : {
+  "4b793c35dada08fe9559e952b60b075a" : {
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
@@ -90,13 +69,13 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "7d196740b005d14e",
-      "reportUrl" : "https://Haldirka.github.io/conduit/18//#testresult/7d196740b005d14e",
+      "uid" : "5a05fb9fe20276d1",
+      "reportUrl" : "https://Haldirka.github.io/conduit/18//#testresult/5a05fb9fe20276d1",
       "status" : "passed",
       "time" : {
-        "start" : 1628787284416,
-        "stop" : 1628787287969,
-        "duration" : 3553
+        "start" : 1628787818631,
+        "stop" : 1628787819481,
+        "duration" : 850
       }
     } ]
   },
@@ -110,13 +89,33 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "8d20e98398ce9352",
-      "reportUrl" : "https://Haldirka.github.io/conduit/18//#testresult/8d20e98398ce9352",
+      "uid" : "665096bb27114e83",
+      "reportUrl" : "https://Haldirka.github.io/conduit/18//#testresult/665096bb27114e83",
       "status" : "passed",
       "time" : {
-        "start" : 1628787255590,
-        "stop" : 1628787257990,
-        "duration" : 2400
+        "start" : 1628787809223,
+        "stop" : 1628787811614,
+        "duration" : 2391
+      }
+    } ]
+  },
+  "b13abe8dea944e6ace929e59c359b78e" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "5bdaa427f2587f91",
+      "reportUrl" : "https://Haldirka.github.io/conduit/18//#testresult/5bdaa427f2587f91",
+      "status" : "passed",
+      "time" : {
+        "start" : 1628787839726,
+        "stop" : 1628787842890,
+        "duration" : 3164
       }
     } ]
   },
@@ -130,13 +129,13 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "79956e7a12c5b61f",
-      "reportUrl" : "https://Haldirka.github.io/conduit/18//#testresult/79956e7a12c5b61f",
+      "uid" : "d14621b599610616",
+      "reportUrl" : "https://Haldirka.github.io/conduit/18//#testresult/d14621b599610616",
       "status" : "passed",
       "time" : {
-        "start" : 1628787296290,
-        "stop" : 1628787297239,
-        "duration" : 949
+        "start" : 1628787850509,
+        "stop" : 1628787851467,
+        "duration" : 958
       }
     } ]
   },
@@ -150,33 +149,13 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "82d74e28606525a9",
-      "reportUrl" : "https://Haldirka.github.io/conduit/18//#testresult/82d74e28606525a9",
+      "uid" : "76357da132ac6e99",
+      "reportUrl" : "https://Haldirka.github.io/conduit/18//#testresult/76357da132ac6e99",
       "status" : "passed",
       "time" : {
-        "start" : 1628787266096,
-        "stop" : 1628787267550,
-        "duration" : 1454
-      }
-    } ]
-  },
-  "6d2dee1f58ea7b8eefd2d230e163651a" : {
-    "statistic" : {
-      "failed" : 0,
-      "broken" : 0,
-      "skipped" : 0,
-      "passed" : 1,
-      "unknown" : 0,
-      "total" : 1
-    },
-    "items" : [ {
-      "uid" : "55308d631e78d0f6",
-      "reportUrl" : "https://Haldirka.github.io/conduit/18//#testresult/55308d631e78d0f6",
-      "status" : "passed",
-      "time" : {
-        "start" : 1628787262265,
-        "stop" : 1628787263044,
-        "duration" : 779
+        "start" : 1628787821210,
+        "stop" : 1628787823610,
+        "duration" : 2400
       }
     } ]
   },
@@ -190,13 +169,33 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "f829e54d7afd651d",
-      "reportUrl" : "https://Haldirka.github.io/conduit/18//#testresult/f829e54d7afd651d",
+      "uid" : "126263f1f8aabb13",
+      "reportUrl" : "https://Haldirka.github.io/conduit/18//#testresult/126263f1f8aabb13",
       "status" : "passed",
       "time" : {
-        "start" : 1628787293792,
-        "stop" : 1628787294664,
-        "duration" : 872
+        "start" : 1628787847930,
+        "stop" : 1628787848795,
+        "duration" : 865
+      }
+    } ]
+  },
+  "6d2dee1f58ea7b8eefd2d230e163651a" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "e98e095e7f706fc7",
+      "reportUrl" : "https://Haldirka.github.io/conduit/18//#testresult/e98e095e7f706fc7",
+      "status" : "passed",
+      "time" : {
+        "start" : 1628787816120,
+        "stop" : 1628787816897,
+        "duration" : 777
       }
     } ]
   },
@@ -210,13 +209,13 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "edcf4c95a1d3d629",
-      "reportUrl" : "https://Haldirka.github.io/conduit/18//#testresult/edcf4c95a1d3d629",
+      "uid" : "490cf549f3fae025",
+      "reportUrl" : "https://Haldirka.github.io/conduit/18//#testresult/490cf549f3fae025",
       "status" : "passed",
       "time" : {
-        "start" : 1628787289557,
-        "stop" : 1628787292199,
-        "duration" : 2642
+        "start" : 1628787843629,
+        "stop" : 1628787846209,
+        "duration" : 2580
       }
     } ]
   }

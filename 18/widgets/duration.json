@@ -1,110 +1,110 @@
 [ {
-  "uid" : "627acf003bf834e1",
-  "name" : "test_sign_out",
+  "uid" : "5bdaa427f2587f91",
+  "name" : "test_delete_comment",
   "time" : {
-    "start" : 1628787264628,
-    "stop" : 1628787265499,
-    "duration" : 871
+    "start" : 1628787839726,
+    "stop" : 1628787842890,
+    "duration" : 3164
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "f829e54d7afd651d",
-  "name" : "test_article_list",
+  "uid" : "76357da132ac6e99",
+  "name" : "test_new_article",
   "time" : {
-    "start" : 1628787293792,
-    "stop" : 1628787294664,
-    "duration" : 872
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "8d20e98398ce9352",
-  "name" : "test_registration",
-  "time" : {
-    "start" : 1628787255590,
-    "stop" : 1628787257990,
+    "start" : 1628787821210,
+    "stop" : 1628787823610,
     "duration" : 2400
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "82d74e28606525a9",
-  "name" : "test_new_article",
-  "time" : {
-    "start" : 1628787266096,
-    "stop" : 1628787267550,
-    "duration" : 1454
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "79956e7a12c5b61f",
+  "uid" : "d14621b599610616",
   "name" : "test_listing_article_titles_to_file",
   "time" : {
-    "start" : 1628787296290,
-    "stop" : 1628787297239,
-    "duration" : 949
+    "start" : 1628787850509,
+    "stop" : 1628787851467,
+    "duration" : 958
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "edcf4c95a1d3d629",
-  "name" : "test_save_article_to_file",
-  "time" : {
-    "start" : 1628787289557,
-    "stop" : 1628787292199,
-    "duration" : 2642
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "bc0c1be583a30d82",
-  "name" : "test_accept_cookies",
-  "time" : {
-    "start" : 1628787259591,
-    "stop" : 1628787261644,
-    "duration" : 2053
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "7d196740b005d14e",
-  "name" : "test_delete_comment",
-  "time" : {
-    "start" : 1628787284416,
-    "stop" : 1628787287969,
-    "duration" : 3553
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "4425ad1ad8e976da",
+  "uid" : "d734b84cddb0ac18",
   "name" : "test_creating_comment",
   "time" : {
-    "start" : 1628787269160,
-    "stop" : 1628787282806,
-    "duration" : 13646
+    "start" : 1628787824343,
+    "stop" : 1628787837998,
+    "duration" : 13655
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "e386a79770f59a2b",
-  "name" : "test_editing_user_img",
+  "uid" : "5a05fb9fe20276d1",
+  "name" : "test_sign_out",
   "time" : {
-    "start" : 1628787298855,
-    "stop" : 1628787301788,
-    "duration" : 2933
+    "start" : 1628787818631,
+    "stop" : 1628787819481,
+    "duration" : 850
   },
-  "status" : "failed",
+  "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "55308d631e78d0f6",
+  "uid" : "9f8451da42e8ef8b",
+  "name" : "test_editing_user_img",
+  "time" : {
+    "start" : 1628787853199,
+    "stop" : 1628787855699,
+    "duration" : 2500
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "665096bb27114e83",
+  "name" : "test_registration",
+  "time" : {
+    "start" : 1628787809223,
+    "stop" : 1628787811614,
+    "duration" : 2391
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "490cf549f3fae025",
+  "name" : "test_save_article_to_file",
+  "time" : {
+    "start" : 1628787843629,
+    "stop" : 1628787846209,
+    "duration" : 2580
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "4bac823e7de73ec4",
+  "name" : "test_accept_cookies",
+  "time" : {
+    "start" : 1628787812358,
+    "stop" : 1628787814410,
+    "duration" : 2052
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "126263f1f8aabb13",
+  "name" : "test_article_list",
+  "time" : {
+    "start" : 1628787847930,
+    "stop" : 1628787848795,
+    "duration" : 865
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e98e095e7f706fc7",
   "name" : "test_sign_in",
   "time" : {
-    "start" : 1628787262265,
-    "stop" : 1628787263044,
-    "duration" : 779
+    "start" : 1628787816120,
+    "stop" : 1628787816897,
+    "duration" : 777
   },
   "status" : "passed",
   "severity" : "normal"

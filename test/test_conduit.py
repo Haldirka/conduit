@@ -92,7 +92,7 @@ class TestConduit(object):
         time.sleep(1)
         h1_list = self.driver.find_elements_by_xpath('//a[@class="preview-link"]')
         h1_list[0].click()
-        with open("test/text.csv") as opened_file:
+        with open("test/text.csv", "r") as opened_file:
             file_text = csv.reader(opened_file, delimiter=";")
             file_text_list = list(file_text)
         time.sleep(1)

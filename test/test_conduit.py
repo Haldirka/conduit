@@ -170,15 +170,11 @@ class TestConduit(object):
 
     def test_editing_user_img(self):
         sign_in(self.driver)
-
-        search_element_xpath(self.driver, '//a[@href="#/@Gzs/"]').click()
-        old_img_src = search_element_xpath(self.driver, '//img[@class="user-img"]').get_attribute("src")
-
         search_element_xpath(self.driver, '//a[@href="#/settings" and @class="nav-link"]').click()
 
         img_input = search_element_xpath(self.driver, '//input[@placeholder="URL of profile picture"]')
         img_input.clear()
-        img_input.send_keys("https://cdn.pixabay.com/photo/2014/09/20/13/52/board-453758_960_720.jpg")
+        img_input.send_keys("https://i.pinimg.com/originals/04/30/a2/0430a263502e44a9c594096cc312982e.jpg")
 
         search_element_xpath(self.driver, '//button[@class="btn btn-lg btn-primary pull-xs-right"]').click()
         search_element_xpath(self.driver, '//button[@class="swal-button swal-button--confirm"]').click()
@@ -186,4 +182,4 @@ class TestConduit(object):
         search_element_xpath(self.driver, '//a[@href="#/@Gzs/"]').click()
         new_img_src = search_element_xpath(self.driver, '//img[@class="user-img"]').get_attribute("src")
 
-        assert old_img_src != new_img_src
+        assert new_img_src == "https://i.pinimg.com/originals/04/30/a2/0430a263502e44a9c594096cc312982e.jpg"

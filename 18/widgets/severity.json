@@ -1,0 +1,111 @@
+[ {
+  "uid" : "bc0c1be583a30d82",
+  "name" : "test_accept_cookies",
+  "time" : {
+    "start" : 1628787259591,
+    "stop" : 1628787261644,
+    "duration" : 2053
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e386a79770f59a2b",
+  "name" : "test_editing_user_img",
+  "time" : {
+    "start" : 1628787298855,
+    "stop" : 1628787301788,
+    "duration" : 2933
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "82d74e28606525a9",
+  "name" : "test_new_article",
+  "time" : {
+    "start" : 1628787266096,
+    "stop" : 1628787267550,
+    "duration" : 1454
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "79956e7a12c5b61f",
+  "name" : "test_listing_article_titles_to_file",
+  "time" : {
+    "start" : 1628787296290,
+    "stop" : 1628787297239,
+    "duration" : 949
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8d20e98398ce9352",
+  "name" : "test_registration",
+  "time" : {
+    "start" : 1628787255590,
+    "stop" : 1628787257990,
+    "duration" : 2400
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f829e54d7afd651d",
+  "name" : "test_article_list",
+  "time" : {
+    "start" : 1628787293792,
+    "stop" : 1628787294664,
+    "duration" : 872
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "edcf4c95a1d3d629",
+  "name" : "test_save_article_to_file",
+  "time" : {
+    "start" : 1628787289557,
+    "stop" : 1628787292199,
+    "duration" : 2642
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "4425ad1ad8e976da",
+  "name" : "test_creating_comment",
+  "time" : {
+    "start" : 1628787269160,
+    "stop" : 1628787282806,
+    "duration" : 13646
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "627acf003bf834e1",
+  "name" : "test_sign_out",
+  "time" : {
+    "start" : 1628787264628,
+    "stop" : 1628787265499,
+    "duration" : 871
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "55308d631e78d0f6",
+  "name" : "test_sign_in",
+  "time" : {
+    "start" : 1628787262265,
+    "stop" : 1628787263044,
+    "duration" : 779
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7d196740b005d14e",
+  "name" : "test_delete_comment",
+  "time" : {
+    "start" : 1628787284416,
+    "stop" : 1628787287969,
+    "duration" : 3553
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]
